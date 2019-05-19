@@ -102,12 +102,7 @@ class UpdateSerializer
             $xmlWriter->startElement('field');
             $xmlWriter->writeAttribute('name', $name);
             $xmlWriter->writeAttribute('boost', $field->type->boost);
-            if ($field->type instanceof FieldType\BooleanField) {
-                // FIXME: Empty fields are removed from final document
-                $xmlWriter->text($value ? 'true' : 'false');
-            } else {
-                $xmlWriter->text($value);
-            }
+            $xmlWriter->text($value);
             $xmlWriter->endElement();
         }
     }
