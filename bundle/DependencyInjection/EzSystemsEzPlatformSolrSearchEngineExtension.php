@@ -84,11 +84,6 @@ class EzSystemsEzPlatformSolrSearchEngineExtension extends Extension
      */
     const CLOUD_DISTRIBUTION_STRATEGY_ID = 'ezpublish.search.solr.gateway.distribution_strategy.abstract_cloud';
 
-    /**
-     * @var string
-     */
-    const IMPLICIT_DOCUMENT_ROUTER_ID = 'ezpublish.search.solr.gateway.document_router.implicit';
-
     public function getAlias()
     {
         return 'ez_search_engine_solr';
